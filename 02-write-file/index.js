@@ -25,8 +25,12 @@ rl.on('line', (input) => {
   }
 });
 
+rl.on('SIGINT', () => {
+  console.log('Goodbye! And have a nice day!');
+  process.exit();
+});
+
 rl.on('close', () => {
   writeStream.end();
-
   console.log('Process terminated.');
 });
