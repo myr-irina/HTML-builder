@@ -19,12 +19,6 @@ async function displayFileInformation() {
         const fileSizeKB = (stats.size / 1024).toFixed(3);
 
         console.log(`${item.name} - ${fileExtension} - ${fileSizeKB}kb`);
-      } else {
-        // console.error(
-        //   `Error: ${item.name} is a directory and will be skipped.`,
-        // );
-
-        console.log('===========');
       }
     }
   } catch (error) {
