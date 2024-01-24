@@ -20,9 +20,11 @@ async function displayFileInformation() {
 
         console.log(`${item.name} - ${fileExtension} - ${fileSizeKB}kb`);
       } else {
-        console.error(
-          `Error: ${item.name} is a directory and will be skipped.`,
-        );
+        // console.error(
+        //   `Error: ${item.name} is a directory and will be skipped.`,
+        // );
+
+        console.log('===========');
       }
     }
   } catch (error) {
