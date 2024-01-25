@@ -14,11 +14,12 @@ async function displayFileInformation() {
 
       if (item.isFile()) {
         const fileExtension = path.extname(item.name).slice(1);
+        const fileName = path.parse(item.name).name;
 
         const stats = await fs.stat(itemPath);
         const fileSizeKB = (stats.size / 1024).toFixed(3);
 
-        console.log(`${item.name} - ${fileExtension} - ${fileSizeKB}kb`);
+        console.log(`${fileName} - ${fileExtension} - ${fileSizeKB}kb`);
       }
     }
   } catch (error) {
